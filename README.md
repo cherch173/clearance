@@ -105,14 +105,14 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] Pitch Deck
 - **FRIDAY**
     - [X] Merge Branches to Brian's (Main)
-    - [] Create DATABASE     
-    - [] Build DATABASE
-    - [] Use django-admin to build architecture
-    - [] Use python3 manage.py startapp main
+    - [X] Create DATABASE     
+    - [X] Build DATABASE
+    - [X] Use django-admin to build architecture
+    - [X] Use python3 manage.py startapp main
     _app to build main_app
-    - [] .gitignore
-    - [] Configure DATABASE
-    - [] Migrate before start
+    - [X] .gitignore
+    - [X] Configure DATABASE
+    - [X] Migrate before start
     - [] Begin Django AUTHENTICATION
     - [] DEFINE USER -< CASE Relationship
     - [] Add URLS for Auth
