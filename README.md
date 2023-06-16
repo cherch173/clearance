@@ -86,8 +86,10 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
 ## _**WIREFRAME**_
 ![Image](image.png)
 ***
+***
 
 ## _**ERD**_
+![Image](<Clearance ERD.png>)
 
 ***
 ***
