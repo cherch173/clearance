@@ -17,3 +17,7 @@ def cases_index(request):
   return render(request, 'cases/index.html', {
     'cases': cases
   })
+
+def cases_detail(request, case_id):
+  case = Case.objects.get(id=case_id)
+  return render(request, 'cases/detail.html', { 'case': case })
