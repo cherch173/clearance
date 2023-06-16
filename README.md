@@ -123,10 +123,10 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] Make All CASES Page Display All CASES and their ATTRIBUTES
       
 - **SATURDAY**
-    - [] IMPORT DB into ORM SHELL and CRUD new CASES
-    - [] Test CRUD Functionality
-    - [] Create ADMIN Portal
-    - [] Create CASE DETAILS Page (Show Functionality)
+    - [X] IMPORT DB into ORM SHELL and CRUD new CASES
+    - [X] Test CRUD Functionality
+    - [X] Create ADMIN Portal
+    - [X] Create CASE DETAILS Page (Show Functionality)
     - 
 - **SUNDAY**
     - [] Implement CLASS BASED VIEWS
