@@ -1,6 +1,6 @@
 ## **CLEARANCE**
 ***
-#### _Planet Earth's Best Verified Database of Documented UAP/UFO Encounters_
+#### _Earth's Best Verified Database of Documented UAP/UFO Encounters_
 
 ![Image](https://static01.nyt.com/images/2017/12/19/autossell/STILL2/STILL2-articleLarge-v2.gif?quality=75&auto=webp&disable=upscale)
 
@@ -18,7 +18,7 @@
 ### _**Description**_
 Years ago, we would have scoffed at the idea too. 
 
-However...in light of current events, validated, vetted testimonials and declassified government cables & documents _and_ confirmed UAP Footage captured by high-ranking military officials (well-regarded by many as the most trusted observers in the world) it's become clear that in this era of true UFO/UAP/NHI Disclosure: we need a refined, **organized**, database of all proven UAP Encounters across the globe.
+However...in light of current events, validated, vetted testimonials, declassified government cables & documents _and_ confirmed UAP Footage captured by high-ranking military officials (well-regarded by many as the most trusted observers in the world) it's become clear that in this era of true UFO/UAP/NHI Disclosure: we need a refined, **organized**, database of all proven UAP Encounters across the globe.
 
 **CLEARANCE** is that service.
 
@@ -84,7 +84,7 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
 ***
 ***
 ## _**WIREFRAME**_
-
+![Image](image.png)
 ***
 
 ## _**ERD**_
@@ -101,9 +101,9 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] Wireframe   
     - [X] ERD   
     - [X] ReadME   
-    - [] Pitch Deck
+    - [X] Pitch Deck
 - **FRIDAY**
-    - [] Merge Branches to Brian's (Main)
+    - [X] Merge Branches to Brian's (Main)
     - [] Create DATABSE     
     - [] Build DATABASE
     - [] Use django-admin to build architecture
