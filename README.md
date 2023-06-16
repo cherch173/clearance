@@ -1,5 +1,4 @@
 ## **CLEARANCE**
-***
 #### _Earth's Best Verified Database of Documented UAP/UFO Encounters_
 
 ![Image](https://static01.nyt.com/images/2017/12/19/autossell/STILL2/STILL2-articleLarge-v2.gif?quality=75&auto=webp&disable=upscale)
