@@ -116,11 +116,11 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] Migrate before start
     - [X] Create HOME Page
     - [X] Create ABOUT Page
-    - [] CASES urls
-    - [] CASES views
-    - [] CASES templates
-    - [] Create All CASES Page
-    - [] Make All CASES Page Display All CASES and their ATTRIBUTES
+    - [X] CASES urls
+    - [X] CASES views
+    - [X] CASES templates
+    - [X] Create All CASES Page
+    - [X] Make All CASES Page Display All CASES and their ATTRIBUTES
       
 - **SATURDAY**
     - [] IMPORT DB into ORM SHELL and CRUD new CASES
