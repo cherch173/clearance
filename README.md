@@ -12,7 +12,7 @@
 
 #### [**GitHub**](https://github.com/cherch173/clearance)
 
-#### [**Trello Board**]()
+#### [**Trello Board**](https://trello.com/b/2BknXJri/clearance)
 ***
 ***
 ### _**Description**_
@@ -35,7 +35,7 @@ We'll also be utilizing the built-in styling of **Materialize** to implement **C
 
 The **database** will be stored and accessed using **PostgreSQL**.
 
-For **Images**, we'll store them using an S3 Bucket in AWS (Amazon Web Services), which we'll also utilize for our **User Authentication**.
+For **Images**, we'll store them using an S3 Bucket in AWS (Amazon Web Services), and for **User Authentication** we'll use DJANGO'S built-in authentication service in conjuction with AWS' IAM feature.
 
 ***
 ***
@@ -46,7 +46,7 @@ For **Images**, we'll store them using an S3 Bucket in AWS (Amazon Web Services)
 - S3 + AWS
 ***
 ***
-![Image](https://pbs.twimg.com/media/FnOMaGTaMAY3I7K?format=jpg&name=4096x4096)
+![Image](https://nypost.com/wp-content/uploads/sites/2/2023/04/chrome-capture-2023-3-21.gif?w=1024)
 ## _**Getting Started**_
 To talk about (and witness) difficult things, simplicity and accessibility is crucial.
 
@@ -64,7 +64,7 @@ Each Model will have the following criteria:
 - declassified = booleanField()
 - foia_link = charField()
 
-**NEWS** (One to Many)
+**REPORTING (News Reports)** (One to Many)
 - I = Internet Only
 - N = Newspaper
 - P = Press Conference
@@ -80,12 +80,99 @@ Each MODEL will have CRUD capabilities.
 
 We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for each CASE.
 
-**Images, Authentication & Authorization** will 
+**Images, Authentication & Authorization** will be achieved through using **S3 & AWS**.
+***
+***
+## _**WIREFRAME**_
 
+***
 
+## _**ERD**_
 
+***
+***
 
+## _**PROJECT FLOW**_
+
+- **THURSDAY**
+    - [X] Project Conceptualization   
+    - [X] Outlining MODELS and their One to Many & Many to Many Relationships    
+    - [X] Trello Board   
+    - [X] Wireframe   
+    - [X] ERD   
+    - [X] ReadME   
+    - [] Pitch Deck
+- **FRIDAY**
+    - [] Merge Branches to Brian's (Main)
+    - [] Create DATABSE     
+    - [] Build DATABASE
+    - [] Use django-admin to build architecture
+    - [] Use python3 manage.py startapp main
+    _app to build main_app
+    - [] .gitignore
+    - [] Configure DATABASE
+    - [] Migrate before start
+    - [] Create ABOUT Page
+    - [] CASES urls
+    - [] CASES views
+    - [] CASES templates
+    - [] Create All CASES Page
+    - [] Make All CASES Page Display All CASES and their ATTRIBUTES
+- **SATURDAY**
+    - [] IMPORT DB into ORM SHELL and CRUD new CASES
+    - [] Test CRUD Functionality
+    - [] Create ADMIN Portal
+    - [] Create CASE DETAILS Page (Show Functionality)
+- **SUNDAY**
+    - [] Implement CLASS BASED VIEWS
+    - [] 5 Steps for CREATE (New Functionality) CASE
+    - [] Create TEMPLATE FORM for CREATING CASE
+    - [] Create CASE UPDATE & CASE DELETE using the 5 Steps
+    - [] Add REPORTING (News) MODEL
+    - [] Migrate
+    - [] Add REPORTING (News) to ADMIN PORTAL
+    - [] Display all REPORTS for CASE
+    - [] Add NEW REPORT (News) Functionality using the 5 Steps
+    - [] Add Materiliaze's JS Library
+    - [] Add Custom Method for Reporting Status (Popularity)
+
+- **MONDAY**
+    - [] Begin MANY to MANY MODEL for TESTIMONIALS (witness reports)
+    - [] Add the ability to CRUD within the MANY to MANY MODEL
+    - [] Ensure MANY to MANY renders on the CASE Detail Page
+    - [] create .env to protect ACCESS KEY
+    - [] Begin S3 + AWS Process
+    - [] create ACCESS KEY ID & SECRET ACCESS KEY
+    - [] create S3 Bucket for App
+    - [] install boto3
+    - [] ADD a PHOTO MODEL
+    - [] ADD the PHOTO ROUTE (url)
+    - [] ADD the add_photo VIEW FUNCTION
+    - [] Update UI on DETAIL PAGE to SHOW PHOTOS
+    - [] Add PHOTOS to ADMIN PORTAL
+    - [] Begin Django Authentication
+    - [] DEFINE USER -< CASE Relationship
+    - [] Add URLS for Auth
+    - [] Logging In / Logging Out
+    - [] Update the Nav Bar to be Dynamic
+    - [] Update CaseCreate View to Link to a User
+    - [] Make sure only LOGGED IN USER can view CASES
+    - [] Implement Authorizartion
+
+- **TUESDAY**
+    - [] Debug
+    - [] Stylizing
+    - [] Systems Tests
+    - [] Deploy bb
+***
+***
+![Image](https://media2.giphy.com/media/kgaDUlwMxDfKZUK5hy/200.gif?cid=6c09b952ln5iq8n7i018r0j2ryt1w5hzazctlrc7yq611ive&ep=v1_gifs_search&rid=200.gif&ct=g) 
+***
+***
 ### _**Credits**_
 #### **IMAGES USED**
 ##### USS Nimitz Tic Tac UAP Gif -- [New York Times](https://static01.nyt.com/images/2017/12/19/autossell/STILL2/STILL2-articleLarge-v2.gif?quality=75&auto=webp&disable=upscale)
 ##### USS Omaha UAP Gif -- [NBC News](https://static01.nyt.com/images/2017/12/19/autossell/STILL2/STILL2-articleLarge-v2.gif?quality=75&auto=webp&disable=upscale)
+##### Mosul ORB Gif -- [Jeremy Corbell](https://nypost.com/wp-content/uploads/sites/2/2023/04/chrome-capture-2023-3-21.gif?w=1024)
+
+##### FLIR US Navy Gif -- [Giphy](https://media2.giphy.com/media/kgaDUlwMxDfKZUK5hy/200.gif?cid=6c09b952ln5iq8n7i018r0j2ryt1w5hzazctlrc7yq611ive&ep=v1_gifs_search&rid=200.gif&ct=g)
