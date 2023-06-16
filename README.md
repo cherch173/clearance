@@ -103,6 +103,7 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] ERD   
     - [X] ReadME   
     - [X] Pitch Deck
+          
 - **FRIDAY**
     - [X] Merge Branches to Brian's (Main)
     - [X] Create DATABASE     
@@ -113,25 +114,20 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] .gitignore
     - [X] Configure DATABASE
     - [X] Migrate before start
-    - [] Begin Django AUTHENTICATION
-    - [] DEFINE USER -< CASE Relationship
-    - [] Add URLS for Auth
-    - [] Logging In / Logging Out
-    - [] Update the Nav Bar to be Dynamic
-    - [] Update CaseCreate View to Link to a User
-    - [] Make sure only LOGGED IN USER can view CASES
-    - [] Implement Authorizartion
-    - [] Create ABOUT Page
+    - [X] Create HOME Page
+    - [X] Create ABOUT Page
     - [] CASES urls
     - [] CASES views
     - [] CASES templates
     - [] Create All CASES Page
     - [] Make All CASES Page Display All CASES and their ATTRIBUTES
+      
 - **SATURDAY**
     - [] IMPORT DB into ORM SHELL and CRUD new CASES
     - [] Test CRUD Functionality
     - [] Create ADMIN Portal
     - [] Create CASE DETAILS Page (Show Functionality)
+    - 
 - **SUNDAY**
     - [] Implement CLASS BASED VIEWS
     - [] 5 Steps for CREATE (New Functionality) CASE
@@ -159,7 +155,14 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [] ADD the add_photo VIEW FUNCTION
     - [] Update UI on DETAIL PAGE to SHOW PHOTOS
     - [] Add PHOTOS to ADMIN PORTAL
-
+    - [] Begin Django AUTHENTICATION
+    - [] DEFINE USER -< CASE Relationship
+    - [] Add URLS for Auth
+    - [] Logging In / Logging Out
+    - [] Update the Nav Bar to be Dynamic
+    - [] Update CaseCreate View to Link to a User
+    - [] Make sure only LOGGED IN USER can view CASES
+    - [] Implement Authorization
 
 - **TUESDAY**
     - [] Debug
