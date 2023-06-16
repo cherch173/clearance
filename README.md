@@ -105,7 +105,7 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] Pitch Deck
 - **FRIDAY**
     - [X] Merge Branches to Brian's (Main)
-    - [] Create DATABSE     
+    - [] Create DATABASE     
     - [] Build DATABASE
     - [] Use django-admin to build architecture
     - [] Use python3 manage.py startapp main
@@ -113,6 +113,14 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [] .gitignore
     - [] Configure DATABASE
     - [] Migrate before start
+    - [] Begin Django AUTHENTICATION
+    - [] DEFINE USER -< CASE Relationship
+    - [] Add URLS for Auth
+    - [] Logging In / Logging Out
+    - [] Update the Nav Bar to be Dynamic
+    - [] Update CaseCreate View to Link to a User
+    - [] Make sure only LOGGED IN USER can view CASES
+    - [] Implement Authorizartion
     - [] Create ABOUT Page
     - [] CASES urls
     - [] CASES views
@@ -151,14 +159,7 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [] ADD the add_photo VIEW FUNCTION
     - [] Update UI on DETAIL PAGE to SHOW PHOTOS
     - [] Add PHOTOS to ADMIN PORTAL
-    - [] Begin Django Authentication
-    - [] DEFINE USER -< CASE Relationship
-    - [] Add URLS for Auth
-    - [] Logging In / Logging Out
-    - [] Update the Nav Bar to be Dynamic
-    - [] Update CaseCreate View to Link to a User
-    - [] Make sure only LOGGED IN USER can view CASES
-    - [] Implement Authorizartion
+
 
 - **TUESDAY**
     - [] Debug
