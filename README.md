@@ -10,7 +10,7 @@
 ***
 
 #### [**GitHub**](https://github.com/cherch173/clearance)
-
+#### [**Pitch Deck**](https://docs.google.com/presentation/d/19VvCpuwiEPfkocKGqwoLBUTidVhzyIa0D_IitGpcXZQ/edit?usp=sharing)
 #### [**Trello Board**](https://trello.com/b/2BknXJri/clearance)
 ***
 ***
@@ -21,7 +21,7 @@ However...in light of current events, validated, vetted testimonials, declassifi
 
 **CLEARANCE** is that service.
 
-Split into individual CASES -- we at _Clearance_ have devised a simple, accesible, user-friendly web based application to handle the maelstrom of information that's come our way since Leslie Kean & Ralph Blumenthal first published their article in the _New York Times_ in 2017 confirming the existence of AATIP (the _Advanced Aerospace Threat Identification Program_) within the United States' Department of Defense within the Pentagon.
+Split into individual CASES -- we at _Clearance_ have devised a simple, accesible, user-friendly web based application to handle the maelstrom of information that's come our way since Leslie Kean & Ralph Blumenthal first published their article in the _New York Times_ in 2017 confirming the existence of AATIP (the _Advanced Aerospace Threat Identification Program_) within the United States' Department of Defense.
 
 Turns out the truth _is_ out there and well, it'd sure be a lot easier to access if it was a bit more user-friendly...
 ***
