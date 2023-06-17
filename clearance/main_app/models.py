@@ -25,7 +25,7 @@ class Case(models.Model):
         return reverse('detail', kwargs={'case_id': self.id})
 
 class Reporting(models.Model):
-    date = models.DateField()
+    date = models.DateField('Date Published')
     report = models.CharField(
         max_length=1,
         choices=REPORTS,

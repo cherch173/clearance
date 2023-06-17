@@ -52,4 +52,25 @@
     <a href="{% url 'cases_delete' case.id %}" class="teal-text">Delete</a>
   </div>
 </div>
+<!-- Reporting UI -->
+<div class="col s6">
+  <table class="lighten-3 teal striped">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Report</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for reporting in case.reporting_set.all %}
+      <tr>
+        <td>{{reporting.date}}</td>
+        <td>{{reporting.get_report_display}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
 {% endblock %}
