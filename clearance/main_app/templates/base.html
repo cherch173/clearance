@@ -25,7 +25,7 @@
   </head>
   <body>
     <header class="navbar-fixed">
-      <nav>
+      <nav class="teal">
         <div class="nav-wrapper">
           <ul>
             <li>
@@ -47,8 +47,8 @@
         {% block content %} 
         {% endblock %}
     </main>
-    <footer class="page-footer">
-      <div class="right">All Rights Reserved, &copy; { now 'Y' } Clearance  &nbsp;</div>
+    <footer class="teal page-footer">
+      <div class="right">&copy; {% now 'Y' %} Clearance, all rights reserved.  &nbsp;</div>
     </footer>
   </body>
 </html>
