@@ -6,7 +6,7 @@ class Case(models.Model):
     date= models.DateField() 
     location = models.CharField(max_length=150)
     description = models.TextField(max_length=300)
-    declassified = models.BooleanField(default=True)
+    # declassified = models.BooleanField(default=True)
     foia = models.CharField(max_length=300)
     
     def __str__(self):
