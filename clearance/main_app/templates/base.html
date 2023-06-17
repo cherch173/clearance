@@ -30,14 +30,15 @@
           <ul>
             <li>
               <a
-                href="/"
+                href="{% url 'home' %}"
                 class="left brand-logo"
                 >&nbsp;&nbsp;Clearance</a>
             </li>
           </ul>
           <ul class="right">
-            <li><a href="/about">About</a></li>
-            <li><a href="/cases">View All Cases</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'cases_create' %}">Add a Case</a></li>
+            <li><a href="{% url 'index' %}">View All Cases</a></li>
           </ul>
         </div>
       </nav>
