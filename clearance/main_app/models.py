@@ -9,6 +9,18 @@ REPORTS = (
     ('T', 'Television'),
 )
 
+class Testimony(models.Model):
+  name = models.CharField(max_length=50)
+  date = models.DateField()
+  location = models.CharField()
+  comments = models.TextField()
+
+  def __str__(self):
+    return self.name
+
+  def get_absolute_url(self):
+    return reverse('testimonies_detail', kwargs={'pk': self.id})
+
 # Create your models here.
 class Case(models.Model):
     name = models.CharField(max_length=150)
@@ -17,6 +29,7 @@ class Case(models.Model):
     description = models.TextField(max_length=300)
     #declassified = models.BooleanField(default=True)
     foia = models.CharField(max_length=300)
+    testimonies = models.ManyToManyField(Testimony)
     
     def __str__(self):
         return f'{self.name} ({self.id})'
