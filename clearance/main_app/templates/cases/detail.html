@@ -77,6 +77,48 @@
       </tbody>
     </table>
   </div>
+
+      <div class = "card-content">
+        <span class="card-title">{{ case.name }}'s Testimonies</span>
+        {% if case.testimonies.count %} {% for testimony in case.testimonies.all %}
+          <p>
+            <strong>
+              Date: 
+            </strong>
+          <strong class="teal-text">
+            {{ testimony.date }}
+          </strong>
+          </p>
+          <p>
+            <strong>
+              Name: 
+            </strong>
+          <strong class="teal-text">
+            {{ testimony.name }}
+          </strong>
+          </p>
+  
+          <p>
+            <strong>
+              Location:
+            </strong>
+          <strong class="teal-text">
+            {{ testimony.location }}
+          </strong> 
+          </p>
+  
+          <p>
+            <strong>
+              Comment: 
+            </strong>
+            <i>
+              {{ testimony.comment }}
+            </i>
+          </p>
+      {% endfor %} {% else %}
+    <h5>No Testimonies yet</h5>
+    {% endif %}
+    </div>
 </div>
 
 <script>
