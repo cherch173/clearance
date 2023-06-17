@@ -54,6 +54,12 @@
   </div>
   <!-- Reporting UI -->
   <div class="col s6">
+    <form action="">
+      {% csrf_token %}
+      {{ reporting_form.as_p }}
+      <input type="submit" class="btn" value="Add Report">
+    </form>
+    <br>
     <table class="lighten-3 teal striped">
       <thead>
         <tr>
@@ -73,6 +79,17 @@
   </div>
 </div>
 
+<script>
+  const dateEl = document.getElementById('id_date');
+  M.Datepicker.init(dateEl, {
+    format: 'yyyy-mm-dd',
+    defaultDate: new Date(),
+    setDefaultDate: true,
+    autoClose: true
+  });
 
+  const selectEl = document.getElementById('id_report')
+  M.FormSelect.init(selectEl);
+</script>
 
 {% endblock %}
