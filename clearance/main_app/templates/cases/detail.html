@@ -48,8 +48,8 @@
     </p>
   </div>
   <div class="card-action">
-    <a href="{% url 'cases_update' case.id %}">Edit</a>
-    <a href="{% url 'cases_delete' case.id %}">Delete</a>
+    <a href="{% url 'cases_update' case.id %}" class="teal-text">Edit</a>
+    <a href="{% url 'cases_delete' case.id %}" class="teal-text">Delete</a>
   </div>
 </div>
 {% endblock %}
