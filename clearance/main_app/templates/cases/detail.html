@@ -6,11 +6,46 @@
 <div class="card">
   <div class="card-content">
     <span class="card-title">{{ case.name }}</span>
-    <p>Date: {{ case.date }}</p>
-    <p>Location: {{ case.location }}</p>
-    <p>Description: {{ case.description }}</p>
-    <p>Declassified: {{ case.declassified }}</p>
-    <p>FOIA: {{ case.foia }}</p>
+    <p>
+      <strong>
+        Date: 
+      </strong>
+    <strong class="teal-text">
+      {{ case.date }}
+    </strong>
+    </p>
+
+    <p>
+      <strong>
+        Location:
+      </strong>
+      <strong class="teal-text">
+        {{ case.location }}
+      </strong> 
+    </p>
+    <p>
+      <strong>
+        Description: 
+      </strong>
+      <i>
+        {{ case.description }}
+      </i>
+    </p>
+    <br><br>
+    <p>
+      <strong>
+        Declassified: 
+      </strong>
+      <strong class="teal-text">
+        {{ case.declassified }}
+      </strong>
+    </p>
+    <p>
+      <strong>
+        FOIA: 
+      </strong>
+      {{ case.foia }}
+    </p>
   </div>
   <div class="card-action">
     <a href="{% url 'cases_update' case.id %}">Edit</a>
