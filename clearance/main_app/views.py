@@ -44,9 +44,9 @@ class CaseDelete(DeleteView):
   success_url = '/cases'
 
 def add_report(request, case_id):
-   form = ReportingForm(request.POST)
-   if form.is_valid():
+  form = ReportingForm(request.POST)
+  if form.is_valid():
     new_report = form.save(commit=False)
     new_report.case_id = case_id
     new_report.save()   
-   return redirect('detail', case_id=case_id)
+  return redirect('detail', case_id=case_id)
