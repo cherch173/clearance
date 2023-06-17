@@ -129,10 +129,10 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] Create CASE DETAILS Page (Show Functionality)
     - 
 - **SUNDAY**
-    - [] Implement CLASS BASED VIEWS
-    - [] 5 Steps for CREATE (New Functionality) CASE
-    - [] Create TEMPLATE FORM for CREATING CASE
-    - [] Create CASE UPDATE & CASE DELETE using the 5 Steps
+    - [X] Implement CLASS BASED VIEWS
+    - [X] 5 Steps for CREATE (New Functionality) CASE
+    - [X] Create TEMPLATE FORM for CREATING CASE
+    - [X] Create CASE UPDATE & CASE DELETE using the 5 Steps
     - [] Add REPORTING (News) MODEL
     - [] Migrate
     - [] Add REPORTING (News) to ADMIN PORTAL
