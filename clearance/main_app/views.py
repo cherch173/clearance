@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Case
 from .forms import ReportingForm
@@ -42,3 +42,11 @@ class CaseUpdate(UpdateView):
 class CaseDelete(DeleteView):
   model = Case
   success_url = '/cases'
+
+def add_report(request, case_id):
+   form = ReportingForm(request.POST)
+   if form.is_valid():
+    new_report = form.save(commit=False)
+    new_report.case_id = case_id
+    new_report.save()   
+   return redirect('detail', case_id=case_id)
