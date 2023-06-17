@@ -31,7 +31,10 @@ class Reporting(models.Model):
         choices=REPORTS,
         default=REPORTS[0][0]
     )
-    case = models.ForeignKey(Case, on_delete=models.CASCADE)
+    case = models.ForeignKey(
+        Case, 
+        on_delete=models.CASCADE
+    )
 
     def __str__(self):
         return f"{self.get_report_display()} on {self.date}"
