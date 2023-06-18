@@ -57,7 +57,7 @@
     <form action="{% url 'add_report' case.id %}" method="POST">
       {% csrf_token %}
       {{ reporting_form.as_p }}
-      <input type="submit" class="btn" value="Add Report">
+      
     </form>
     <br>
     <table class="lighten-3 teal striped">
@@ -99,7 +99,7 @@
   <!-- Leaving the action empty makes the form post to the same url used to display it -->
   <form action="" method="POST">
     <!-- Django requires the following for security purposes -->
- 
+    {% csrf_token %}
     <table>
       <thead>
         <tr>
@@ -142,5 +142,5 @@
   const selectEl = document.getElementById('id_report')
   M.FormSelect.init(selectEl);
 </script>
-{% csrf_token %}
+
 {% endblock %}

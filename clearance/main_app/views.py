@@ -34,12 +34,12 @@ def cases_detail(request, case_id):
 
 def assoc_testimony(request, case_id, testimony_id):
   # Note that you can pass a toy's id instead of the whole toy object
-  Case.objects.get(id=case_id).testimonys.add(testimony_id)
+  Case.objects.get(id=case_id).testimonies.add(testimony_id)
   return redirect('detail', case_id=case_id)
 
 class CaseCreate(CreateView):
   model = Case
-  fields = '__all__'
+  fields = ['name', 'date', 'location', 'description', 'foia']
 
 class CaseUpdate(UpdateView):
   model = Case
