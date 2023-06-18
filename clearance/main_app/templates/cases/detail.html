@@ -77,7 +77,58 @@
       </tbody>
     </table>
   </div>
+  <hr />
+  <!-- Testimony UI -->
+<div class="row">
+  <div class="col s6">
+    <h5>{{ case.name }} Testimonials</h5>
+    {% if case.testimonies.count %} {% for testimony in case.testimonies.all %}
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">
+          {{testimony.name}}'s testimony for the Case of {{ case.name }} 
+        </span>
+      </div>
+    </div>
+    {% endfor %} {% else %}
+    <h6>No Testimonies </h6>
+    {% endif %}
+  </div>
+    <div class="col s6">
+      <h6>New Testimony</h6>
+  <!-- Leaving the action empty makes the form post to the same url used to display it -->
+  <form action="" method="POST">
+    <!-- Django requires the following for security purposes -->
+ 
+    <table>
+      <thead>
+        <tr>
+          <th>Date:</th>
+          <th> Name:</th>
+          <th>Location:</th>
+          <th>Comment:</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for testimony in case.testimonies_set.all %}
+        <tr>
+          <td>{{ testimony.date }}</td>
+          <td>{{ testimony.name }}</td>
+          <td>{{ testimony.location }}</td>
+          <td>{{ testimony.comment }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      <!-- Render the inputs inside of <tr>s & <td>s -->
+      {{ form.as_table }}
+    </table>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+  
+  </div>
 </div>
+
+
 
 <script>
   const dateEl = document.getElementById('id_date');
@@ -91,5 +142,5 @@
   const selectEl = document.getElementById('id_report')
   M.FormSelect.init(selectEl);
 </script>
-
+{% csrf_token %}
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Case
+from .models import Case, Testimony
 from .forms import ReportingForm
 # cases = [
 #   {'name':'USS Nimtiz - Tic Tac Incident', 'date':'11/14/2004', 'location':'Pacific Ocean (Southern Cali)', 'description': 'Commander David Fravor was engaged by an unidentified aircraft which attempted to merge plot his aircraft. The UAP was described as a long white cylindrical object traveling at approx. 3000/mph and was able to change direction and altitude instantaneously. It is known as the Tic Tac Incident.', 'declassified': 'True', 'foia': 'https://www.theblackvault.com/documentarchive/' },
@@ -22,13 +22,20 @@ def cases_index(request):
 
 def cases_detail(request, case_id):
   case = Case.objects.get(id=case_id)
+  id_list = case.testimonies.all().values_list('id')
   # init ReportingForm to be rendered
+  testimonies_case_doesnt_have = Testimony.objects.exclude(id__in=id_list)
   reporting_form = ReportingForm()
   return render(request, 'cases/detail.html', {
      'case': case,
-     'reporting_form': reporting_form
-    
+     'reporting_form': reporting_form,
+     'testimonies': testimonies_case_doesnt_have
   })
+
+def assoc_testimony(request, case_id, testimony_id):
+  # Note that you can pass a toy's id instead of the whole toy object
+  Case.objects.get(id=case_id).testimonys.add(testimony_id)
+  return redirect('detail', case_id=case_id)
 
 class CaseCreate(CreateView):
   model = Case
@@ -50,3 +57,21 @@ def add_report(request, case_id):
     new_report.case_id = case_id
     new_report.save()   
   return redirect('detail', case_id=case_id)
+
+# class TestimonyList(ListView):
+#   model = Testimony
+
+# class TestimonyDetail(DetailView):
+#   model = Testimony
+
+class TestimonyCreate(CreateView):
+  model = Testimony
+  fields = '__all__'
+
+class TestimonyUpdate(UpdateView):
+  model = Testimony
+  fields = ['date', 'name', 'location', 'comment']
+
+class TestimonyDelete(DeleteView):
+  model = Testimony
+  success_url = '/testimonies'
