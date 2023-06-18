@@ -81,7 +81,7 @@
   <!-- Testimony UI -->
 <div class="row">
   <div class="col s6">
-    <h5>{{ case.name }}'s Testimonies</h5>
+    <h5>{{ case.name }} Testimonials</h5>
     {% if case.testimonies.count %} {% for testimony in case.testimonies.all %}
     <div class="card">
       <div class="card-content">
@@ -91,7 +91,7 @@
       
     </div>
     {% endfor %} {% else %}
-    <h6>No Testimonies 😿</h6>
+    <h6>No Testimonies </h6>
     {% endif %}
   </div>
     <div class="col s6">
@@ -99,7 +99,7 @@
   <!-- Leaving the action empty makes the form post to the same url used to display it -->
   <form action="" method="POST">
     <!-- Django requires the following for security purposes -->
-    {% csrf_token %}
+ 
     <table>
       <thead>
         <tr>
@@ -127,6 +127,8 @@
   </div>
 </div>
 
+
+
 <script>
   const dateEl = document.getElementById('id_date');
   M.Datepicker.init(dateEl, {
@@ -139,5 +141,5 @@
   const selectEl = document.getElementById('id_report')
   M.FormSelect.init(selectEl);
 </script>
-
+{% csrf_token %}
 {% endblock %}
