@@ -22,13 +22,18 @@ def cases_index(request):
 
 def cases_detail(request, case_id):
   case = Case.objects.get(id=case_id)
+  id_list = case.testimonies.all().values_list('id')
   # init ReportingForm to be rendered
   reporting_form = ReportingForm()
   return render(request, 'cases/detail.html', {
      'case': case,
-     'reporting_form': reporting_form
-    
+     'reporting_form': reporting_form,
   })
+
+def assoc_testimony(request, case_id, testimony_id):
+  # Note that you can pass a toy's id instead of the whole toy object
+  Case.objects.get(id=case_id).testimonys.add(testimony_id)
+  return redirect('detail', case_id=case_id)
 
 class CaseCreate(CreateView):
   model = Case

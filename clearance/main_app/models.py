@@ -13,7 +13,7 @@ class Testimony(models.Model):
   name = models.CharField(max_length=50)
   date = models.DateField()
   location = models.CharField()
-  comments = models.TextField()
+  comments = models.CharField()
 
   def __str__(self):
     return self.name

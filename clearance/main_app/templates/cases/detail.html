@@ -77,48 +77,53 @@
       </tbody>
     </table>
   </div>
-
-      <div class = "card-content">
-        <span class="card-title">{{ case.name }}'s Testimonies</span>
-        {% if case.testimonies.count %} {% for testimony in case.testimonies.all %}
-          <p>
-            <strong>
-              Date: 
-            </strong>
-          <strong class="teal-text">
-            {{ testimony.date }}
-          </strong>
-          </p>
-          <p>
-            <strong>
-              Name: 
-            </strong>
-          <strong class="teal-text">
-            {{ testimony.name }}
-          </strong>
-          </p>
-  
-          <p>
-            <strong>
-              Location:
-            </strong>
-          <strong class="teal-text">
-            {{ testimony.location }}
-          </strong> 
-          </p>
-  
-          <p>
-            <strong>
-              Comment: 
-            </strong>
-            <i>
-              {{ testimony.comment }}
-            </i>
-          </p>
-      {% endfor %} {% else %}
-    <h5>No Testimonies yet</h5>
-    {% endif %}
+  <hr />
+  <!-- Testimony UI -->
+<div class="row">
+  <div class="col s6">
+    <h5>{{ case.name }}'s Testimonies</h5>
+    {% if case.testimonies.count %} {% for testimony in case.testimonies.all %}
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">
+        </span>
+      
     </div>
+    {% endfor %} {% else %}
+    <h6>No Testimonies 😿</h6>
+    {% endif %}
+  </div>
+    <div class="col s6">
+      <h6>New Testimony</h6>
+  <!-- Leaving the action empty makes the form post to the same url used to display it -->
+  <form action="" method="POST">
+    <!-- Django requires the following for security purposes -->
+    {% csrf_token %}
+    <table>
+      <thead>
+        <tr>
+          <th>Date:</th>
+          <th> Name:</th>
+          <th>Location:</th>
+          <th>Comment:</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for testimony in case.testimonies_set.all %}
+        <tr>
+          <td>{{ testimony.date }}</td>
+          <td>{{ testimony.name }}</td>
+          <td>{{ testimony.location }}</td>
+          <td>{{ testimony.comment }}</td>
+        </tr>
+      </tbody>
+      <!-- Render the inputs inside of <tr>s & <td>s -->
+      {{ form.as_table }}
+    </table>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+  {% endfor %}
+  </div>
 </div>
 
 <script>
