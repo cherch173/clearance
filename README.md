@@ -129,22 +129,22 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] Create CASE DETAILS Page (Show Functionality)
     - 
 - **SUNDAY**
-    - [] Implement CLASS BASED VIEWS
-    - [] 5 Steps for CREATE (New Functionality) CASE
-    - [] Create TEMPLATE FORM for CREATING CASE
-    - [] Create CASE UPDATE & CASE DELETE using the 5 Steps
-    - [] Add REPORTING (News) MODEL
-    - [] Migrate
-    - [] Add REPORTING (News) to ADMIN PORTAL
-    - [] Display all REPORTS for CASE
-    - [] Add NEW REPORT (News) Functionality using the 5 Steps
-    - [] Add Materiliaze's JS Library
+    - [X] Implement CLASS BASED VIEWS
+    - [X] 5 Steps for CREATE (New Functionality) CASE
+    - [X] Create TEMPLATE FORM for CREATING CASE
+    - [X] Create CASE UPDATE & CASE DELETE using the 5 Steps
+    - [X] Add REPORTING (News) MODEL
+    - [X] Migrate
+    - [X] Add REPORTING (News) to ADMIN PORTAL
+    - [X] Display all REPORTS for CASE
+    - [X] Add NEW REPORT (News) Functionality using the 5 Steps
+    - [X] Add Materiliaze's JS Library
     - [] Add Custom Method for Reporting Status (Popularity)
 
 - **MONDAY**
-    - [] Begin MANY to MANY MODEL for TESTIMONIALS (witness reports)
-    - [] Add the ability to CRUD within the MANY to MANY MODEL
-    - [] Ensure MANY to MANY renders on the CASE Detail Page
+    - [X] Begin MANY to MANY MODEL for TESTIMONIALS (witness reports)
+    - [X] Add the ability to CRUD within the MANY to MANY MODEL
+    - [X] Ensure MANY to MANY renders on the CASE Detail Page
     - [] create .env to protect ACCESS KEY
     - [] Begin S3 + AWS Process
     - [] create ACCESS KEY ID & SECRET ACCESS KEY

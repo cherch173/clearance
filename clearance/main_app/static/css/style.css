@@ -3,7 +3,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    /* color: whitesmoke;*/
+    /*color: whitesmoke;*/
 } 
 main {
     flex: 1 0 auto;
