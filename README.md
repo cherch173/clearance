@@ -142,9 +142,9 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [] Add Custom Method for Reporting Status (Popularity)
 
 - **MONDAY**
-    - [] Begin MANY to MANY MODEL for TESTIMONIALS (witness reports)
-    - [] Add the ability to CRUD within the MANY to MANY MODEL
-    - [] Ensure MANY to MANY renders on the CASE Detail Page
+    - [X] Begin MANY to MANY MODEL for TESTIMONIALS (witness reports)
+    - [X] Add the ability to CRUD within the MANY to MANY MODEL
+    - [X] Ensure MANY to MANY renders on the CASE Detail Page
     - [] create .env to protect ACCESS KEY
     - [] Begin S3 + AWS Process
     - [] create ACCESS KEY ID & SECRET ACCESS KEY
