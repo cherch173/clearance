@@ -88,7 +88,7 @@
         <span class="card-title">
           {{testimony.name}}'s testimony for the Case of {{ case.name }} 
         </span>
-      
+      </div>
     </div>
     {% endfor %} {% else %}
     <h6>No Testimonies </h6>
@@ -117,13 +117,14 @@
           <td>{{ testimony.location }}</td>
           <td>{{ testimony.comment }}</td>
         </tr>
+        {% endfor %}
       </tbody>
       <!-- Render the inputs inside of <tr>s & <td>s -->
       {{ form.as_table }}
     </table>
     <button type="submit" class="btn">Submit</button>
   </form>
-  {% endfor %}
+  
   </div>
 </div>
 
