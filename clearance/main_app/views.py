@@ -20,7 +20,7 @@ def about(request):
 
 def cases_index(request):
   # We pass data to a template very much like we did in Express!
-  cases= Case.objects.all()
+  cases= Case.objects.filter(user=request.user)
   return render(request, 'cases/index.html', {
     'cases': cases
   })
