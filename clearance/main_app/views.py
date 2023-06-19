@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from .models import Case, Testimony, Photo
 from .forms import ReportingForm
 # cases = [
@@ -18,6 +19,7 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+@login_required
 def cases_index(request):
   # We pass data to a template very much like we did in Express!
   cases= Case.objects.filter(user=request.user)
@@ -25,6 +27,7 @@ def cases_index(request):
     'cases': cases
   })
 
+@login_required
 def cases_detail(request, case_id):
   case = Case.objects.get(id=case_id)
   id_list = case.testimonies.all().values_list('id')
@@ -37,6 +40,7 @@ def cases_detail(request, case_id):
      'testimonies': testimonies_case_doesnt_have
   })
 
+@login_required
 def assoc_testimony(request, case_id, testimony_id):
   Case.objects.get(id=case_id).testimonies.add(testimony_id)
   return redirect('detail', case_id=case_id)
@@ -61,6 +65,7 @@ class CaseDelete(DeleteView):
   model = Case
   success_url = '/cases'
 
+@login_required
 def add_report(request, case_id):
   form = ReportingForm(request.POST)
   if form.is_valid():
@@ -74,7 +79,6 @@ def add_report(request, case_id):
 
 # class TestimonyDetail(DetailView):
 #   model = Testimony
-
 class add_testimony(CreateView):
   model = Testimony
   fields = '__all__'
@@ -87,6 +91,7 @@ class TestimonyDelete(DeleteView):
   model = Testimony
   success_url = '/testimonies'
 
+@login_required
 def add_photo(request, case_id):
     # photo-file will be the "name" attribute on the <input type="file">
     photo_file = request.FILES.get('photo-file', None)
