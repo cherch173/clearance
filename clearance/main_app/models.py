@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-
+from django.contrib.auth.models import User
 
 REPORTS = (
     ('I', 'Internet'),
@@ -30,6 +30,7 @@ class Case(models.Model):
     #declassified = models.BooleanField(default=True)
     foia = models.CharField(max_length=300)
     testimonies = models.ManyToManyField(Testimony)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return f'{self.name} ({self.id})'
