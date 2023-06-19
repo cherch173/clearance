@@ -44,6 +44,12 @@ class CaseCreate(CreateView):
   model = Case
   fields = ['name', 'date', 'location', 'description', 'foia']
 
+  def form_valid(self, form):
+    # Assign the logged in user (self.request.user)
+    form.instance.user = self.request.user  # form.instance is the cat
+    # Let the CreateView do its job as usual
+    return super().form_valid(form)
+  
 class CaseUpdate(UpdateView):
   model = Case
   # Let's disallow the renaming of a cat by excluding the name field!
