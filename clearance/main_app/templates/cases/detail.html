@@ -3,6 +3,7 @@
 
 <h1>Case Details</h1>
 <div class="row">
+ <div class="col s6">
   <div class="card">
     <div class="card-content">
       <span class="card-title">{{ case.name }}</span>
@@ -52,12 +53,25 @@
       <a href="{% url 'cases_delete' case.id %}" class="teal-text">Delete</a>
     </div>
   </div>
+    {% for photo in case.photo_set.all %}
+      <img class="responsive-img card-panel" src="{{photo.url}}">
+    {% empty %}
+      <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+    {% endfor %}
+
+    <form action="{% url 'add_photo' case.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
+      {% csrf_token %}
+      <input type="file" name="photo-file">
+      <br><br>
+      <button type="submit" class="btn">Upload Photo</button>
+  </form>
+  </div>
   <!-- Reporting UI -->
   <div class="col s6">
     <form action="{% url 'add_report' case.id %}" method="POST">
       {% csrf_token %}
       {{ reporting_form.as_p }}
-      
+      <input type="submit" class="btn" value='add report'/>
     </form>
     <br>
     <table class="lighten-3 teal striped">
@@ -77,14 +91,13 @@
       </tbody>
     </table>
   </div>
-  <hr />
+ 
   <!-- Testimony UI -->
   <div class="col s6">
-   <form action="" method="POST"> 
+    <form action="" method="POST">
       {% csrf_token %}
       {{ testimonies_form.as_p }}
-      <input type="submit" class="btn" value="Add testimony">
-    </form>
+    
     <br>
     <table class="lighten-3 teal striped">
       <thead>
@@ -107,8 +120,11 @@
         {% endfor %}
       </tbody>
     </table>
+    <br><br>
+    <input type="submit" class="btn" value="Add testimony">
+  </form>
   </div>
-  <hr />
+ 
   
   </div>
 </div>
