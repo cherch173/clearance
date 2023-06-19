@@ -6,6 +6,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Case, Testimony, Photo
 from .forms import ReportingForm
 # cases = [
@@ -46,7 +47,7 @@ def assoc_testimony(request, case_id, testimony_id):
   return redirect('detail', case_id=case_id)
 
 
-class CaseCreate(CreateView):
+class CaseCreate(LoginRequiredMixin,CreateView):
   model = Case
   fields = ['name', 'date', 'location', 'description', 'foia']
 
@@ -56,12 +57,12 @@ class CaseCreate(CreateView):
     # Let the CreateView do its job as usual
     return super().form_valid(form)
   
-class CaseUpdate(UpdateView):
+class CaseUpdate(LoginRequiredMixin,UpdateView):
   model = Case
   # Let's disallow the renaming of a cat by excluding the name field!
   fields = ['name', 'date', 'location', 'description', 'foia']
 
-class CaseDelete(DeleteView):
+class CaseDelete(LoginRequiredMixin,DeleteView):
   model = Case
   success_url = '/cases'
 
@@ -79,15 +80,15 @@ def add_report(request, case_id):
 
 # class TestimonyDetail(DetailView):
 #   model = Testimony
-class add_testimony(CreateView):
+class add_testimony(LoginRequiredMixin,CreateView):
   model = Testimony
   fields = '__all__'
 
-class TestimonyUpdate(UpdateView):
+class TestimonyUpdate(LoginRequiredMixin,UpdateView):
   model = Testimony
   fields = ['date', 'name', 'location', 'comment']
 
-class TestimonyDelete(DeleteView):
+class TestimonyDelete(LoginRequiredMixin,DeleteView):
   model = Testimony
   success_url = '/testimonies'
 
