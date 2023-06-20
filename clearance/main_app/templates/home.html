@@ -1,6 +1,9 @@
 {% extends 'base.html' %} 
 {% block content %}
 <h4>Welcome to <span class="teal-text">CLEARANCE</span></h4>
+{% if user.is_authenticated %}
+
+{% else %}
 <h5>Select <span class="teal-text">REGISTER</span> or <span class="teal-text">LOG IN</span></h5>
 
 
@@ -11,5 +14,5 @@
 
 
 
-
+{% endif %}
 {% endblock %}
