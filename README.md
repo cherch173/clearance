@@ -121,7 +121,7 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] CASES templates
     - [X] Create All CASES Page
     - [X] Make All CASES Page Display All CASES and their ATTRIBUTES
-      
+    
 - **SATURDAY**
     - [X] IMPORT DB into ORM SHELL and CRUD new CASES
     - [X] Test CRUD Functionality
@@ -144,7 +144,7 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
 - **MONDAY**
     - [X] Begin MANY to MANY MODEL for TESTIMONIALS (witness reports)
     - [X] Add the ability to CRUD within the MANY to MANY MODEL
-    - [X] Ensure MANY to MANY renders on the CASE Detail Page
+    - [] Ensure MANY to MANY renders on the CASE Detail Page
     - [X] create .env to protect ACCESS KEY
     - [X] Begin S3 + AWS Process
     - [X] create ACCESS KEY ID & SECRET ACCESS KEY
