@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 
 REPORTS = (
+    ('D', 'Documentary'),
     ('I', 'Internet'),
     ('N', 'Newspaper'),
     ('P', 'Press Conference'),
@@ -29,6 +30,10 @@ class Case(models.Model):
     description = models.TextField(max_length=500)
     #declassified = models.BooleanField(default=True)
     foia = models.CharField(max_length=300)
+    news = models.URLField(
+       max_length=128,
+       blank=True
+    )
     testimonies = models.ManyToManyField(Testimony)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     
