@@ -94,10 +94,9 @@
  
   <!-- Testimony UI -->
   <div class="col s6">
-    <form action="" method="POST">
+    <form action="{}" method="POST">
       {% csrf_token %}
       {{ testimonies_form.as_p }}
-    
     <br>
     <table class="lighten-3 teal striped">
       <thead>
@@ -109,20 +108,24 @@
         </tr>
       </thead>
       <tbody>
-        {% for testimonies in case.testimonies_set.all %}
+        {% for testimony in testimonies %}
         <tr>
-          <td>{{testimonies.date}}</td>
-          <td>{{testimonies.name}}</td>
-          <td>{{testimonies.location}}</td>
-          <td>{{testimonies.comment}}</td>
-          <td>{{testimonies.get_testimony_display}}</td>
+          <td>{{testimony.date}}</td>
+          <td>{{testimony.name}}</td>
+          <td>{{testimony.location}}</td>
+          <td>{{testimony.comment}}</td>
+          <td>{{testimony.get_testimony_display}}</td>
         </tr>
+        <form action="{% url 'assoc_testimony' case.id testimony.id %}" method="POST">
+          {% csrf_token %}
+          {{ testimonies_form.as_p }}
+        </form>
         {% endfor %}
       </tbody>
     </table>
     <br><br>
     <input type="submit" class="btn" value="Add testimony">
-  </form>
+    <br><br>
   </div>
  
   

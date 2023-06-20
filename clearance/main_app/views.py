@@ -33,12 +33,13 @@ def cases_detail(request, case_id):
   case = Case.objects.get(id=case_id)
   id_list = case.testimonies.all().values_list('id')
   # init ReportingForm to be rendered
-  testimonies_case_doesnt_have = Testimony.objects.exclude(id__in=id_list)
+  testimonies = Testimony.objects.all()
+  print(testimonies)
   reporting_form = ReportingForm()
   return render(request, 'cases/detail.html', {
      'case': case,
      'reporting_form': reporting_form,
-     'testimonies': testimonies_case_doesnt_have
+     'testimonies': testimonies
   })
 
 @login_required
