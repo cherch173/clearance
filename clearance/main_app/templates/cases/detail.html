@@ -6,46 +6,60 @@
  <div class="col s6">
   <div class="card">
     <div class="card-content">
-      <span class="card-title">{{ case.name }}</span>
+      <span class="card-title">
+        <span class="teal-text text-darken-3">
+          {{ case.name }}
+        </span>
+      </span>
       <p>
-        <strong>
-          Date: 
-        </strong>
-      <strong class="teal-text">
+        <span class="teal-text">
+          <strong>
+            DATE: 
+          </strong>
+        </span>
+      <strong>
         {{ case.date }}
       </strong>
       </p>
   
       <p>
-        <strong>
-          Location:
-        </strong>
-        <strong class="teal-text">
-          {{ case.location }}
-        </strong> 
+        <span class="teal-text">
+          <strong>
+            LOCATION: 
+          </strong>
+        </span>
+          {{ case.location }} 
       </p>
       <p>
-        <strong>
-          Description: 
-        </strong>
-        <i>
-          {{ case.description }}
-        </i>
+        <span class="teal-text">
+          <strong>
+            DESCRIPTION: 
+          </strong>
+        </span>
+        <span class="">
+          <i>
+            {{ case.description }}
+          </i>
+        </span>
       </p>
       <br><br>
-      <p>
+      <!-- <p>
         <strong>
           Declassified: 
         </strong>
         <strong class="teal-text">
           {{ case.declassified }}
         </strong>
-      </p>
-      <p>
-        <strong>
-          FOIA: 
-        </strong>
-        {{ case.foia }}
+      </p> -->
+      <p class=>
+        <span class="teal-text">
+          <strong>
+            TOP REPORT: 
+          </strong>
+        </span>
+        <span class="">
+          {{ case.foia }}
+        </span>
       </p>
     </div>
     <div class="card-action">
@@ -145,6 +159,10 @@
 
   const selectEl = document.getElementById('id_report')
   M.FormSelect.init(selectEl);
+  
+  const testimonyEl = document.getElementById('id_testimony')
+  M.FormSelect.init(testimonyEl);
+
 </script>
 
 {% endblock %}
