@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: rgb(5, 12, 14);
+    /* background-color: rgb(5, 12, 14); */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -14,22 +14,22 @@ main {
 }
 
 h1 {
-    color: whitesmoke;
+    color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 6.66vmin;
 }
 h3 {
-    color: whitesmoke;
+    color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 5vmin;
 }
 h4 {
-    color: whitesmoke;
+    color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 4.2vmin;
 }
 h5 {
-    color: whitesmoke;
+    color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 3 vmin;
 }
