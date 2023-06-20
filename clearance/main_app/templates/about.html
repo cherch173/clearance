@@ -31,10 +31,13 @@
     We allow USERS who've witnessed anomalous phenomena to leave <span class="teal-text">WITNESS TESTIMONIALS</span>.
 </p>
 <img src="https://ca-times.brightspotcdn.com/dims4/default/1c9520b/2147483647/strip/true/crop/329x220+1+0/resize/320x214!/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fef%2F19%2Fbabc908f4e75b9c305adad951a59%2Fufo-zoomed.gif" alt="">
+{% if user.is_authenticated %}
+
+{% else %}
 <p>Ready? Click <span class="teal-text">SIGN UP</span> below</p> to create your USER NAME and join <span class="teal-text">Clearance</span>.
 <br>
 <br>
 <button class="btn" onclick="window.location.href = '/accounts/signup'">SIGN UP</button>
 
-
+{% endif %}
 {% endblock %}
