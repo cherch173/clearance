@@ -3,11 +3,11 @@ html {
 }
 
 body {
-    /* background-color: rgb(5, 12, 14); */
+    background-color: whitesmoke;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    /*color: whitesmoke;*/
+    color: rgb(2, 18, 19);
 } 
 main {
     flex: 1 0 auto;
