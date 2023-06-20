@@ -26,7 +26,7 @@ class Case(models.Model):
     name = models.CharField(max_length=150)
     date= models.DateField() 
     location = models.CharField(max_length=150)
-    description = models.TextField(max_length=300)
+    description = models.TextField(max_length=500)
     #declassified = models.BooleanField(default=True)
     foia = models.CharField(max_length=300)
     testimonies = models.ManyToManyField(Testimony)
