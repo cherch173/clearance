@@ -1,4 +1,15 @@
-{% extends 'base.html' %} {% block content %}
-<h1>Home</h1>
+{% extends 'base.html' %} 
+{% block content %}
+<h4>Welcome to <span class="teal-text">CLEARANCE</span></h4>
+<h5>Select <span class="teal-text">REGISTER</span> or <span class="teal-text">LOG IN</span></h5>
+
+
+<br>
+<button onclick="window.location.href = '/accounts/signup'" style="border-radius: 5px;">SIGN UP</button>
+<br><br>
+<button onclick="window.location.href = '/accounts/login'" style="border-radius: 5px;">LOG IN</button>
+
+
+
 
 {% endblock %}
