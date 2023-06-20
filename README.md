@@ -145,24 +145,24 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] Begin MANY to MANY MODEL for TESTIMONIALS (witness reports)
     - [X] Add the ability to CRUD within the MANY to MANY MODEL
     - [X] Ensure MANY to MANY renders on the CASE Detail Page
-    - [] create .env to protect ACCESS KEY
-    - [] Begin S3 + AWS Process
-    - [] create ACCESS KEY ID & SECRET ACCESS KEY
-    - [] create S3 Bucket for App
-    - [] install boto3
-    - [] ADD a PHOTO MODEL
-    - [] ADD the PHOTO ROUTE (url)
-    - [] ADD the add_photo VIEW FUNCTION
-    - [] Update UI on DETAIL PAGE to SHOW PHOTOS
-    - [] Add PHOTOS to ADMIN PORTAL
-    - [] Begin Django AUTHENTICATION
-    - [] DEFINE USER -< CASE Relationship
-    - [] Add URLS for Auth
-    - [] Logging In / Logging Out
-    - [] Update the Nav Bar to be Dynamic
-    - [] Update CaseCreate View to Link to a User
-    - [] Make sure only LOGGED IN USER can view CASES
-    - [] Implement Authorization
+    - [X] create .env to protect ACCESS KEY
+    - [X] Begin S3 + AWS Process
+    - [X] create ACCESS KEY ID & SECRET ACCESS KEY
+    - [X] create S3 Bucket for App
+    - [X] install boto3
+    - [X] ADD a PHOTO MODEL
+    - [X] ADD the PHOTO ROUTE (url)
+    - [X] ADD the add_photo VIEW FUNCTION
+    - [X] Update UI on DETAIL PAGE to SHOW PHOTOS
+    - [X] Add PHOTOS to ADMIN PORTAL
+    - [X] Begin Django AUTHENTICATION
+    - [X] DEFINE USER -< CASE Relationship
+    - [X] Add URLS for Auth
+    - [X] Logging In / Logging Out
+    - [X] Update the Nav Bar to be Dynamic
+    - [X] Update CaseCreate View to Link to a User
+    - [X] Make sure only LOGGED IN USER can view CASES
+    - [X] Implement Authorization
 
 - **TUESDAY**
     - [] Debug
