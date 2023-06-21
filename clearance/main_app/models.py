@@ -76,4 +76,4 @@ class Video(models.Model):
     case = models.ForeignKey(Case, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"Video for case_id: {self.case_id} @{self.url}"     
+        return f"Video for case_id: {self.case_id} @{self.url}"   
