@@ -14,6 +14,10 @@ main {
     flex: 1 0 auto;
 }
 
+nav {
+    text-shadow: -.5px .5px black;
+}
+
 h1 {
     color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
