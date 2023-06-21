@@ -79,7 +79,7 @@
       <button type="submit" class="btn">Upload Photo</button>
     </form>
     {% for video in case.video_set.all %}
-    <video width="320" height="240" controls>
+    <video  class="responsive-video card-panel" controls>
       <source src="{{video.url}}" type="video/mp4">
     </video> 
     {% empty %}
