@@ -51,6 +51,7 @@ a {
 button {
     border-radius: 5px;
     border: 1px solid teal;
+    text-shadow: -.5px .5px black;
 }
 
 button:hover {
@@ -64,4 +65,5 @@ button:hover {
 footer.page-footer {
     padding-top: 0;
     text-align: right;
+    text-shadow: -.5px .5px black;
 }
