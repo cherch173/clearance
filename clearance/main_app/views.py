@@ -23,7 +23,7 @@ def about(request):
 @login_required
 def cases_index(request):
   # We pass data to a template very much like we did in Express!
-  cases= Case.objects.filter(user=request.user)
+  cases = Case.objects.all()
   return render(request, 'cases/index.html', {
     'cases': cases
   })
