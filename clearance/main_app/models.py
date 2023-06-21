@@ -8,6 +8,7 @@ REPORTS = (
     ('P', 'Press Conference'),
     ('T', 'Television'),
 )
+
 class Testimony(models.Model):
   name = models.CharField(max_length=50)
   date = models.DateField()
@@ -17,7 +18,6 @@ class Testimony(models.Model):
     return self.name
   def get_absolute_url(self):
     return reverse('testimonies_detail', kwargs={'pk': self.id})
-# Create your models here.
 class Case(models.Model):
     name = models.CharField(max_length=150)
     date= models.DateField()
@@ -35,6 +35,21 @@ class Case(models.Model):
         return f'{self.name} ({self.id})'
     def get_absolute_url(self):
         return reverse('detail', kwargs={'case_id': self.id})
+# Create your models here.
+class Comment(models.Model):
+    post = models.ForeignKey(Case, on_delete=models.CASCADE, related_name='comments')
+    author = models.CharField(max_length=200)
+    text = models.TextField()
+    created_date = models.DateTimeField()
+    approved_comment = models.BooleanField(default=False)
+
+    def approve(self):
+        self.approved_comment = True
+        self.save()
+
+    def __str__(self):
+        return self.text
+
 class Reporting(models.Model):
     date = models.DateField('Date Published')
     report = models.CharField(
