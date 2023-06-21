@@ -70,3 +70,10 @@ class Photo(models.Model):
 
      def __str__(self):
         return f"Photo for case_id: {self.case_id} @{self.url}"
+
+class Video(models.Model):
+    url = models.CharField(max_length=200)
+    case = models.ForeignKey(Case, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Video for case_id: {self.case_id} @{self.url}"     

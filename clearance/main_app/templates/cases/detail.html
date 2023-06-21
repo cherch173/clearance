@@ -67,8 +67,8 @@
     </div>
   </div>
     {% for photo in case.photo_set.all %}
-      <img class="responsive-img card-panel" src="{{photo.url}}">
-    {% empty %}
+      <img class="responsive-img card-panel" src="{{photo.url}}">   
+      {% empty %}
       <div class="card-panel teal-text center-align">No Photos Uploaded</div>
     {% endfor %}
 
@@ -77,6 +77,20 @@
       <input type="file" name="photo-file">
       <br><br>
       <button type="submit" class="btn">Upload Photo</button>
+    </form>
+    {% for video in case.video_set.all %}
+    <video width="320" height="240" controls>
+      <source src="{{video.url}}" type="video/mp4">
+    </video> 
+    {% empty %}
+      <div class="card-panel teal-text center-align">No Videos Uploaded</div>
+    {% endfor %}
+
+    <form action="{% url 'add_video' case.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
+      {% csrf_token %}
+      <input type="file" name="video-file">
+      <br><br>
+      <button type="submit" class="btn">Upload Video</button>
   </form>
   </div>
   <!-- Reporting UI -->
