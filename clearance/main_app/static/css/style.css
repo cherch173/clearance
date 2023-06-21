@@ -4,6 +4,7 @@ html {
 
 body {
     background-color: whitesmoke;
+    background-size: cover;
     display: flex;
     min-height: 100vh;
     flex-direction: column;

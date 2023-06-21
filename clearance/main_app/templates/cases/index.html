@@ -25,28 +25,23 @@
         {{ case.location }}
       </strong> 
     </p>
+    <br>
     <p>
-      <strong>
+      <strong class="teal-text">
         Description: 
       </strong>
       <i>
         {{ case.description }}
       </i>
     </p>
-    <br><br>
+    <br>
     <p class="testP">
       <span class="teal-text">
         <strong>
           TOP REPORT: 
         </strong>
       </span>
-      {{ case.news }}
-    </p>
-    <p>
-      <strong>
-        FOIA: 
-      </strong>
-      {{ case.foia }}
+      <a href="{{ case.news }}">{{ case.news }}</a>
     </p>
   </div>
 </div>
