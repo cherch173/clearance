@@ -50,7 +50,7 @@ def assoc_testimony(request, case_id, testimony_id):
 
 class CaseCreate(LoginRequiredMixin,CreateView):
   model = Case
-  fields = ['name', 'date', 'location', 'description', 'foia']
+  fields = ['name', 'date', 'location', 'description', 'news']
 
   def form_valid(self, form):
     # Assign the logged in user (self.request.user)
