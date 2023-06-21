@@ -113,6 +113,7 @@ def add_photo(request, case_id):
             print('An error occurred uploading file to S3')
             print(e)
     return redirect('detail', case_id=case_id) 
+
 @login_required
 def add_video(request, case_id):
     # photo-file will be the "name" attribute on the <input type="file">
