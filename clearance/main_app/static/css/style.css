@@ -43,6 +43,11 @@ a {
     color: rgb(0, 85, 85);
 }
 
+.card-content {
+    text-overflow: clip;
+    overflow: hidden;
+}
+
 
 .btn {
     border-radius: 5px;
