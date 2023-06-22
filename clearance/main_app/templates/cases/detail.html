@@ -118,8 +118,32 @@
       </tbody>
     </table>
   </div>
- 
-  <!-- Testimony UI -->
+  <div class="col s6">
+    <form action="{% url 'add_comment' case.id %}" method="POST">
+      {% csrf_token %}
+      <!-- Render the inputs -->
+      {{ comment_form.as_p }}
+      <input type="submit" class="btn" value="Add Comment">
+    </form>
+    <table class="striped">
+      <thead>
+        <tr><th>Author</th><th>Description</th><th>Date</th><th>Comment</th></tr>
+      </thead>
+      <tbody>
+        {% for comment in comments %}
+          <tr>
+            <td>{{comment.author}}</td>
+            <td>{{comment.text}}</td>
+            <td>{{comment.created_date}}</td>
+            <td>{{comment.approved_comment}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <!-- New Markup Above -->
+</div>
+   <!-- Testimony UI 
   <div class="col s6">
     <form action="{}" method="POST">
       {% csrf_token %}
@@ -154,9 +178,10 @@
     <input type="submit" class="btn" value="Add testimony">
     <br><br>
   </div>
+  -->
  
   
-  </div>
+  
 </div>
 
 
@@ -170,11 +195,21 @@
     autoClose: true
   });
 
+  const dateEle = document.getElementById('id_created_date');
+  M.Datepicker.init(dateEle, {
+    format: 'yyyy-mm-dd',
+    defaultDate: new Date(),
+    setDefaultDate: true,
+    autoClose: true
+  });
+
   const selectEl = document.getElementById('id_report')
   M.FormSelect.init(selectEl);
   
   const testimonyEl = document.getElementById('id_testimony')
   M.FormSelect.init(testimonyEl);
+
+ 
 
 </script>
 

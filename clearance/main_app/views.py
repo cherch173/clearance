@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Case, Testimony, Photo, Video
 from .forms import ReportingForm
+from .forms import CommentForm
 # cases = [
 #   {'name':'USS Nimtiz - Tic Tac Incident', 'date':'11/14/2004', 'location':'Pacific Ocean (Southern Cali)', 'description': 'Commander David Fravor was engaged by an unidentified aircraft which attempted to merge plot his aircraft. The UAP was described as a long white cylindrical object traveling at approx. 3000/mph and was able to change direction and altitude instantaneously. It is known as the Tic Tac Incident.', 'declassified': 'True', 'foia': 'https://www.theblackvault.com/documentarchive/' },
 # ]
@@ -31,16 +32,21 @@ def cases_index(request):
 @login_required
 def cases_detail(request, case_id):
   case = Case.objects.get(id=case_id)
-  id_list = case.testimonies.all().values_list('id')
+  comments = case.comments.all()
+  # id_list = case.testimonies.all().values_list('id')
   # init ReportingForm to be rendered
-  testimonies = Testimony.objects.all()
-  print(testimonies)
+ # testimonies = Testimony.objects.all()
+  #print(testimonies)
   reporting_form = ReportingForm()
+  comment_form = CommentForm()
+  print(comments)
   return render(request, 'cases/detail.html', {
      'case': case,
      'reporting_form': reporting_form,
-     'testimonies': testimonies
+     'comment_form': comment_form,
+     'comments': comments 
   })
+
 
 @login_required
 def assoc_testimony(request, case_id, testimony_id):
@@ -74,6 +80,18 @@ def add_report(request, case_id):
     new_report = form.save(commit=False)
     new_report.case_id = case_id
     new_report.save()   
+  return redirect('detail', case_id=case_id)
+
+def add_comment(request, case_id):
+  # create a ModelForm instance using the data in request.POST
+  form = CommentForm(request.POST)
+  # validate the form
+  if form.is_valid():
+    # don't save the form to the db until it
+    # has the cat_id assigned
+    new_comment = form.save(commit=False)
+    new_comment.case_id = case_id
+    new_comment.save()
   return redirect('detail', case_id=case_id)
 
 # class TestimonyList(ListView):
@@ -153,3 +171,4 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
+
