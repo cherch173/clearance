@@ -38,6 +38,9 @@ h5 {
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 3 vmin;
 }
+p {
+    font-size: 5 vmin;
+}
 
 a {
     color: rgb(0, 85, 85);

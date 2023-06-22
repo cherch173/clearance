@@ -37,11 +37,11 @@ class Case(models.Model):
         return reverse('detail', kwargs={'case_id': self.id})
 # Create your models here.
 class Comment(models.Model):
-    post = models.ForeignKey(Case, on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField()
-    approved_comment = models.BooleanField(default=False)
+    approved_comment = models.BooleanField(default=True)
+    case = models.ForeignKey(Case, on_delete=models.CASCADE,  related_name='comments')
 
     def approve(self):
         self.approved_comment = True
@@ -49,7 +49,10 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
-
+    
+    def get_absolute_url(self):
+        return reverse('detail', kwargs={'case_id': self.id})
+    
 class Reporting(models.Model):
     date = models.DateField('Date Published')
     report = models.CharField(
