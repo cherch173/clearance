@@ -67,7 +67,7 @@ class CaseCreate(LoginRequiredMixin,CreateView):
 class CaseUpdate(LoginRequiredMixin,UpdateView):
   model = Case
   # Let's disallow the renaming of a cat by excluding the name field!
-  fields = ['name', 'date', 'location', 'description', 'foia']
+  fields = ['name', 'date', 'location', 'description', 'news']
 
 class CaseDelete(LoginRequiredMixin,DeleteView):
   model = Case
