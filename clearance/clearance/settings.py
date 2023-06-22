@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import environ
+import os
 
 environ.Env()
 environ.Env.read_env()
@@ -24,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-hlymj0u3w87+9f8fbhaf3n%9k8(de1kp2t)3m&byz0!7(=^=5f'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,10 +80,14 @@ WSGI_APPLICATION = 'clearance.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'clearance',
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': os.environ['DATABASE_NAME'],
+    'USER': os.environ['DATABASE_USER'],
+    'PASSWORD': os.environ['DATABASE_PASS'],
+    'HOST': os.environ['DATABASE_HOST'],
+    'PORT': os.environ['DATABASE_PORT'],
+  }
 }
 
 
