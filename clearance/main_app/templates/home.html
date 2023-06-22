@@ -1,7 +1,10 @@
 {% extends 'base.html' %} 
 {% block content %}
+<br>
 <h4>Welcome to <span class="teal-text">CLEARANCE</span></h4>
 {% if user.is_authenticated %}
+<br>
+<button class="btn" onclick="window.location.href = '/cases'" style="border-radius: 5px;">VIEW ALL CASES</button>
 
 {% else %}
 <h5>Select <span class="teal-text">REGISTER</span> or <span class="teal-text">LOG IN</span></h5>
