@@ -42,7 +42,7 @@ For **Images**, we'll store them using an S3 Bucket in AWS (Amazon Web Services)
 - Python
 - PostgreSQL
 - Django
-- S3 + AWS
+- S3 + AWS + Neon
 ***
 ***
 ![Image](https://nypost.com/wp-content/uploads/sites/2/2023/04/chrome-capture-2023-3-21.gif?w=1024)
@@ -64,15 +64,15 @@ Each Model will have the following criteria:
 - foia_link = charField()
 
 **REPORTING (News Reports)** (One to Many)
+- D = Documentaries
 - I = Internet Only
 - N = Newspaper
 - P = Press Conference
 - T = Television
 
-**TESTIMONIALS (Witnesses)** (Many to Many)
+**COMMENTS (Witnesses)** (One to Many)
 - date = dateField()
 - name = charField()
-- location = charField()
 - comment = textField()
 
 Each MODEL will have CRUD capabilities.
@@ -165,10 +165,10 @@ We'll also utililiza SHOW Functionality to bring an INDEX & DETAILS view for eac
     - [X] Implement Authorization
 
 - **TUESDAY**
-    - [] Debug
-    - [] Stylizing
-    - [] Systems Tests
-    - [] Deploy bb
+    - [X] Debug
+    - [X] Stylizing
+    - [X] Systems Tests
+    - [X] Deploy bb
 ***
 ***
 ![Image](https://media2.giphy.com/media/kgaDUlwMxDfKZUK5hy/200.gif?cid=6c09b952ln5iq8n7i018r0j2ryt1w5hzazctlrc7yq611ive&ep=v1_gifs_search&rid=200.gif&ct=g) 
