@@ -9,8 +9,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     color: rgb(2, 18, 19);
-}
-
+} 
 main {
     flex: 1 0 auto;
 }
@@ -24,19 +23,16 @@ h1 {
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 6.66vmin;
 }
-
 h3 {
     color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 5vmin;
 }
-
 h4 {
     color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 4.2vmin;
 }
-
 h5 {
     color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
@@ -49,21 +45,21 @@ a {
 }
 
 a:visited {
-    color: rgb(0, 85, 85);
+    color: whitesmoke;
     filter: will-change;
 }
 
 a:hover {
     transform: scale(102%);
     transition: ease-in 173ms;
-    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 183));
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
     color: rgb(0, 142, 142);
 }
 
 a:visited:hover {
     transform: scale(102%);
     transition: ease-in 173ms;
-    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 183));
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
     color: rgb(0, 142, 142);
 }
 
@@ -77,7 +73,7 @@ p {
 }
 
 .card:hover {
-    /* transform: scale(102%); */
+    transform: scale(102%);
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
 }
@@ -85,17 +81,6 @@ p {
 .card-content {
     text-overflow: clip;
     overflow: hidden;
-}
-
-.col s{
-    border-radius: 5px;
-    filter: will-change;
-}
-
-.col s:hover {
-    transition: ease-in 173ms;
-    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 183));
-    transform: scale3d(100.5%);
 }
 
 
@@ -109,7 +94,7 @@ p {
     color: whitesmoke;
     transform: scale(103%);
     transition: ease-in 173ms;
-    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 183));
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
 }
 
 button {
@@ -141,19 +126,16 @@ footer.page-footer {
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
         font-size: 4.2vmin;
     }
-
     h3 {
         color: rgb(173, 222, 222);
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
         font-size: 3vmin;
     }
-
     h4 {
         color: rgb(173, 222, 222);
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
         font-size: 2.5vmin;
     }
-
     h5 {
         color: rgb(173, 222, 222);
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
