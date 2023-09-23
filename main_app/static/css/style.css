@@ -73,7 +73,6 @@ p {
 }
 
 .card:hover {
-    /* transform: scale(102%); */
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
 }
@@ -95,6 +94,18 @@ p {
     transform: scale(101%);
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
+}
+
+th {
+    padding: 1.5vmin;
+    text-align: center;
+    place-items: center;
+}
+
+tr {
+    padding: 2vmin;
+    text-align: center;
+    place-items: center;
 }
 
 
