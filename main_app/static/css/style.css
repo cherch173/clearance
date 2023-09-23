@@ -124,6 +124,22 @@ table {
     align-items: center;
 }
 
+thead {
+    border-radius: 5px;
+    text-align: center;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+tbody {
+    border-radius: 5px;
+    text-align: center;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
 td {
     border: 1px solid rgb(2, 18, 19);
     border-radius: 5px;
