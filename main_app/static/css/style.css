@@ -79,7 +79,7 @@ p {
 .card:hover {
     /* transform: scale(102%); */
     transition: ease-in 173ms;
-    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 183));
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
 }
 
 .card-content {
@@ -87,12 +87,12 @@ p {
     overflow: hidden;
 }
 
-.col {
+.col s{
     border-radius: 5px;
     filter: will-change;
 }
 
-.col:hover {
+.col s:hover {
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 183));
     transform: scale3d(100.5%);
