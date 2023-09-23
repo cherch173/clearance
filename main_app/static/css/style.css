@@ -107,22 +107,29 @@ table {
     border-radius: 5px;
     text-align: center;
     place-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 td {
     border: 1px solid rgb(2, 18, 19);
+    border-radius: 5px;
 }
 
 th {
     padding: 1vmin;
     text-align: center;
     place-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 tr {
     padding: 1vmin;
     text-align: center;
     place-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
