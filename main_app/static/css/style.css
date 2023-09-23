@@ -18,6 +18,10 @@ nav {
     text-shadow: -.5px .5px black;
 }
 
+.brand-logo {
+    margin: 2vmin;
+}
+
 h1 {
     color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
@@ -45,6 +49,10 @@ a {
 
 p {
     font-size: 2.25vmin;
+}
+
+.card {
+    border-radius: 5px;
 }
 
 .card-content {
@@ -80,6 +88,10 @@ footer.page-footer {
 }
 
 @media (max-width: 786px) {
+    .brand-logo{
+        margin: 2vmin;
+    }
+
     h1 {
         color: rgb(173, 222, 222);
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
@@ -99,5 +111,9 @@ footer.page-footer {
         color: rgb(173, 222, 222);
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
         font-size: 2vmin;
+    }
+
+    p {
+        font-size: 1.73vmin;
     }
 }
