@@ -109,20 +109,21 @@ table {
     place-items: center;
 }
 
+td {
+    border: 1px solid rgb(2, 18, 19);
+}
+
 th {
     padding: 1vmin;
-    display: grid;
     text-align: center;
     place-items: center;
 }
 
 tr {
     padding: 1vmin;
-    display: grid;
     text-align: center;
     place-items: center;
 }
-
 
 .btn {
     border-radius: 5px;
