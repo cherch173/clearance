@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Case Details</h1>
+<h1 class="center-align">Case Details</h1>
 <div class="row">
   <div class="col s6">
     <div class="card">
@@ -21,7 +21,6 @@
             {{ case.date }}
           </strong>
         </p>
-
         <p>
           <span class="teal-text">
             <strong>
@@ -37,28 +36,20 @@
               DESCRIPTION:
             </strong>
           </span>
-          <span class="">
+          <span>
             <i>
               {{ case.description }}
             </i>
           </span>
         </p>
         <br>
-        <!-- <p>
-        <strong>
-          Declassified: 
-        </strong>
-        <strong class="teal-text">
-          {{ case.declassified }}
-        </strong>
-      </p> -->
         <p class="testP">
           <span class="teal-text">
             <strong>
               TOP REPORT:
             </strong>
           </span>
-          <a target="_blank" href="{{ case.news }}">{{ case.news }}</a>
+          <a style="font-size: 1vmin;" target="_blank" href="{{ case.news }}">{{ case.news }}</a>
         </p>
       </div>
       <div class="card-action">
@@ -66,8 +57,8 @@
         <a href="{% url 'cases_delete' case.id %}" class="teal-text">Delete</a>
       </div>
     </div>
-    <!-- Reporting UI -->
 
+    <!-- Reporting UI -->
     <form action="{% url 'add_report' case.id %}" method="POST">
       {% csrf_token %}
       {{ reporting_form.as_p }}
@@ -98,22 +89,20 @@
       <input type="submit" class="btn" value="Add Comment">
     </form>
     <br>
-    <table class="lighten-3 teal striped">
-      <thead>
+    <table class="lighten-3 teal striped center-align">
+      <thead class="center-align">
         <tr>
           <th>Author</th>
           <th>Description</th>
           <th>Date</th>
-          <!-- <th>Comment</th> -->
         </tr>
       </thead>
-      <tbody>
+      <tbody class="center-align">
         {% for comment in comments %}
         <tr>
           <td>{{comment.author}}</td>
           <td>{{comment.text}}</td>
           <td>{{comment.created_date}}</td>
-          <!-- <td>{{comment.approved_comment}}</td> -->
         </tr>
         {% endfor %}
       </tbody>
