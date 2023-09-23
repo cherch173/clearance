@@ -110,7 +110,6 @@ p {
 }
 
 .responsive-video:hover {
-    transform: scale(101%);
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
     cursor: pointer;
