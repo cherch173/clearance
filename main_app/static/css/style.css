@@ -61,6 +61,7 @@ button {
     border-radius: 5px;
     border: 1px solid teal;
     text-shadow: -.5px .5px black;
+    filter: will-change;
 }
 
 button:hover {
@@ -68,6 +69,7 @@ button:hover {
     color: whitesmoke;
     transform: scale(103%);
     transition: ease-in 173ms;
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 183));
 }
 
 
@@ -75,4 +77,27 @@ footer.page-footer {
     padding-top: 0;
     text-align: right;
     text-shadow: -.5px .5px black;
+}
+
+@media (max-width: 786px) {
+    h1 {
+        color: rgb(173, 222, 222);
+        text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
+        font-size: 4.2vmin;
+    }
+    h3 {
+        color: rgb(173, 222, 222);
+        text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
+        font-size: 3vmin;
+    }
+    h4 {
+        color: rgb(173, 222, 222);
+        text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
+        font-size: 2.5vmin;
+    }
+    h5 {
+        color: rgb(173, 222, 222);
+        text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
+        font-size: 2vmin;
+    }
 }
