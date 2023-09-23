@@ -99,10 +99,6 @@ p {
     opacity: 100%;
 }
 
-.responsive-img:active{
-    cursor: zoom-in;
-}
-
 table{
     border-radius: 5px;
     text-align: center;
