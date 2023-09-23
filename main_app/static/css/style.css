@@ -73,7 +73,7 @@ p {
 }
 
 .card:hover {
-    transform: scale(102%);
+    /* transform: scale(102%); */
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
 }
@@ -81,6 +81,18 @@ p {
 .card-content {
     text-overflow: clip;
     overflow: hidden;
+    font-size: auto;
+}
+
+.col s{
+    border-radius: 5px;
+    filter: will-change;
+}
+
+.col s:hover{
+    transform: scale(101%);
+    transition: ease-in 173ms;
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
 }
 
 
@@ -109,7 +121,7 @@ button:hover {
     color: whitesmoke;
     transform: scale(103%);
     transition: ease-in 173ms;
-    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 183));
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
 }
 
 
