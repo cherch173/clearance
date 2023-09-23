@@ -3,48 +3,48 @@
 
 <h1>Case Details</h1>
 <div class="row">
- <div class="col s6">
-  <div class="card">
-    <div class="card-content">
-      <span class="card-title">
-        <span class="teal-text text-darken-3">
-          {{ case.name }}
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">
+          <span class="teal-text text-darken-3">
+            {{ case.name }}
+          </span>
         </span>
-      </span>
-      <p>
-        <span class="teal-text">
+        <p>
+          <span class="teal-text">
+            <strong>
+              DATE:
+            </strong>
+          </span>
           <strong>
-            DATE: 
+            {{ case.date }}
           </strong>
-        </span>
-      <strong>
-        {{ case.date }}
-      </strong>
-      </p>
-  
-      <p>
-        <span class="teal-text">
-          <strong>
-            LOCATION: 
-          </strong>
-        </span>
-          {{ case.location }} 
-      </p>
-      <br>
-      <p>
-        <span class="teal-text">
-          <strong>
-            DESCRIPTION: 
-          </strong>
-        </span>
-        <span class="">
-          <i>
-            {{ case.description }}
-          </i>
-        </span>
-      </p>
-      <br>
-      <!-- <p>
+        </p>
+
+        <p>
+          <span class="teal-text">
+            <strong>
+              LOCATION:
+            </strong>
+          </span>
+          {{ case.location }}
+        </p>
+        <br>
+        <p>
+          <span class="teal-text">
+            <strong>
+              DESCRIPTION:
+            </strong>
+          </span>
+          <span class="">
+            <i>
+              {{ case.description }}
+            </i>
+          </span>
+        </p>
+        <br>
+        <!-- <p>
         <strong>
           Declassified: 
         </strong>
@@ -52,26 +52,26 @@
           {{ case.declassified }}
         </strong>
       </p> -->
-      <p class="testP">
-        <span class="teal-text">
-          <strong>
-            TOP REPORT: 
-          </strong>
-        </span>
-        <a target="_blank" href="{{ case.news }}">{{ case.news }}</a>
-      </p>
+        <p class="testP">
+          <span class="teal-text">
+            <strong>
+              TOP REPORT:
+            </strong>
+          </span>
+          <a target="_blank" href="{{ case.news }}">{{ case.news }}</a>
+        </p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'cases_update' case.id %}" class="teal-text">Edit</a>
+        <a href="{% url 'cases_delete' case.id %}" class="teal-text">Delete</a>
+      </div>
     </div>
-    <div class="card-action">
-      <a href="{% url 'cases_update' case.id %}" class="teal-text">Edit</a>
-      <a href="{% url 'cases_delete' case.id %}" class="teal-text">Delete</a>
-    </div>
-  </div>
     <!-- Reporting UI -->
-  
+
     <form action="{% url 'add_report' case.id %}" method="POST">
       {% csrf_token %}
       {{ reporting_form.as_p }}
-      <input type="submit" class="btn" value='add report'/>
+      <input type="submit" class="btn" value='add report' />
     </form>
     <br>
     <table class="lighten-3 teal striped">
@@ -100,16 +100,21 @@
     <br>
     <table class="lighten-3 teal striped">
       <thead>
-        <tr><th>Author</th><th>Description</th><th>Date</th><th>Comment</th></tr>
+        <tr>
+          <th>Author</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Comment</th>
+        </tr>
       </thead>
       <tbody>
         {% for comment in comments %}
-          <tr>
-            <td>{{comment.author}}</td>
-            <td>{{comment.text}}</td>
-            <td>{{comment.created_date}}</td>
-            <td>{{comment.approved_comment}}</td>
-          </tr>
+        <tr>
+          <td>{{comment.author}}</td>
+          <td>{{comment.text}}</td>
+          <td>{{comment.created_date}}</td>
+          <td>{{comment.approved_comment}}</td>
+        </tr>
         {% endfor %}
       </tbody>
     </table>
@@ -117,9 +122,9 @@
   </div>
   <div class="col s6">
     {% for photo in case.photo_set.all %}
-      <img class="responsive-img card-panel" src="{{photo.url}}">   
-      {% empty %}
-      <div class="card-panel teal-text center-align">No Photos Uploaded</div>
+    <img class="responsive-img card-panel" src="{{photo.url}}">
+    {% empty %}
+    <div class="card-panel teal-text center-align">No Photos Uploaded</div>
     {% endfor %}
 
     <form action="{% url 'add_photo' case.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
@@ -129,11 +134,11 @@
       <button type="submit" class="btn">Upload Photo</button>
     </form>
     {% for video in case.video_set.all %}
-    <video  class="responsive-video card-panel" controls>
+    <video class="responsive-video card-panel" controls>
       <source src="{{video.url}}" type="video/mp4">
-    </video> 
+    </video>
     {% empty %}
-      <div class="card-panel teal-text center-align">No Videos Uploaded</div>
+    <div class="card-panel teal-text center-align">No Videos Uploaded</div>
     {% endfor %}
 
     <form action="{% url 'add_video' case.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
@@ -141,15 +146,15 @@
       <input type="file" name="video-file">
       <br><br>
       <button type="submit" class="btn">Upload Video</button>
-  </form>
-</div>
+    </form>
+  </div>
 
-  
-   
-  
+
+
+
   <!-- New Markup Above -->
 </div>
-   <!-- Testimony UI 
+<!-- Testimony UI 
   <div class="col s6">
     <form action="{}" method="POST">
       {% csrf_token %}
@@ -185,9 +190,9 @@
     <br><br>
   </div>
   -->
- 
-  
-  
+
+
+
 </div>
 
 
@@ -211,11 +216,11 @@
 
   const selectEl = document.getElementById('id_report')
   M.FormSelect.init(selectEl);
-  
+
   const testimonyEl = document.getElementById('id_testimony')
   M.FormSelect.init(testimonyEl);
 
- 
+
 
 </script>
 
