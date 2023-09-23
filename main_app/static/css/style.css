@@ -96,6 +96,10 @@ p {
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
 }
 
+table{
+    border-radius: 5px;
+}
+
 th {
     padding: 1.5vmin;
     text-align: center;
