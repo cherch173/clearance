@@ -92,10 +92,24 @@ p {
 .responsive-img {
     border-radius: 5px;
     filter: will-change;
-    opacity: 90%;
+    opacity: 95%;
 }
 
 .responsive-img:hover {
+    transform: scale(101%);
+    transition: ease-in 173ms;
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.responsive-video {
+    border-radius: 5px;
+    filter: will-change;
+    opacity: 95%;
+}
+
+.responsive-video:hover {
     transform: scale(101%);
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
@@ -161,6 +175,10 @@ button:hover {
     transform: scale(103%);
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
+}
+
+.uploadBtn {
+    border-radius: 5px;
 }
 
 
