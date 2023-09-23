@@ -82,14 +82,16 @@ p {
     text-overflow: clip;
     overflow: hidden;
     font-size: auto;
+    margin: 1vmin;
+    padding: 1vmin;
 }
 
-.col s{
+.responsive-img{
     border-radius: 5px;
     filter: will-change;
 }
 
-.col s:hover{
+.responsive-img:hover{
     transform: scale(101%);
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
