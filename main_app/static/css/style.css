@@ -163,6 +163,10 @@ button:hover {
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
 }
 
+.uploadBtn {
+    border-radius: 5px;
+}
+
 
 footer.page-footer {
     padding-top: 0;

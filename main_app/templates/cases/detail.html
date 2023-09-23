@@ -66,13 +66,13 @@
     </form>
     <br>
     <table class="lighten-3 teal striped">
-      <thead>
+      <thead class="center-align">
         <tr>
           <th>Date</th>
           <th>Report</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="center-align">
         {% for reporting in case.reporting_set.all %}
         <tr>
           <td>{{reporting.date}}</td>
@@ -118,7 +118,7 @@
 
     <form action="{% url 'add_photo' case.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
       {% csrf_token %}
-      <input type="file" name="photo-file">
+      <input type="file" name="photo-file" class="uploadBtn">
       <br><br>
       <button type="submit" class="btn">Upload Photo</button>
     </form>
@@ -132,7 +132,7 @@
 
     <form action="{% url 'add_video' case.id %}" enctype="multipart/form-data" method="POST" class="card-panel">
       {% csrf_token %}
-      <input type="file" name="video-file">
+      <input type="file" name="video-file" class="uploadBtn">
       <br><br>
       <button type="submit" class="btn">Upload Video</button>
     </form>
