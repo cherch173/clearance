@@ -88,16 +88,25 @@ p {
 .responsive-img{
     border-radius: 5px;
     filter: will-change;
+    opacity: 90%;
 }
 
 .responsive-img:hover{
     transform: scale(101%);
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.responsive-img:active{
+    cursor: zoom-in;
 }
 
 table{
     border-radius: 5px;
+    text-align: center;
+    place-items: center;
 }
 
 th {
