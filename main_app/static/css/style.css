@@ -83,6 +83,7 @@ footer.page-footer {
     text-shadow: -.5px .5px black;
 }
 
+
 @media (max-width: 786px) {
     h1 {
         color: rgb(173, 222, 222);
