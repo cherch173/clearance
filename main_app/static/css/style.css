@@ -9,7 +9,8 @@ body {
     min-height: 100vh;
     flex-direction: column;
     color: rgb(2, 18, 19);
-} 
+}
+
 main {
     flex: 1 0 auto;
 }
@@ -23,16 +24,19 @@ h1 {
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 6.66vmin;
 }
+
 h3 {
     color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 5vmin;
 }
+
 h4 {
     color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
     font-size: 4.2vmin;
 }
+
 h5 {
     color: rgb(173, 222, 222);
     text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
@@ -85,13 +89,13 @@ p {
     padding: 1vmin;
 }
 
-.responsive-img{
+.responsive-img {
     border-radius: 5px;
     filter: will-change;
     opacity: 90%;
 }
 
-.responsive-img:hover{
+.responsive-img:hover {
     transform: scale(101%);
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
@@ -99,24 +103,22 @@ p {
     opacity: 100%;
 }
 
-.responsive-img:active{
-    cursor: zoom-in;
-}
-
-table{
+table {
     border-radius: 5px;
     text-align: center;
     place-items: center;
 }
 
 th {
-    padding: 1.5vmin;
+    padding: 1vmin;
+    display: grid;
     text-align: center;
     place-items: center;
 }
 
 tr {
-    padding: 2vmin;
+    padding: 1vmin;
+    display: grid;
     text-align: center;
     place-items: center;
 }
@@ -164,16 +166,19 @@ footer.page-footer {
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
         font-size: 4.2vmin;
     }
+
     h3 {
         color: rgb(173, 222, 222);
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
         font-size: 3vmin;
     }
+
     h4 {
         color: rgb(173, 222, 222);
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
         font-size: 2.5vmin;
     }
+
     h5 {
         color: rgb(173, 222, 222);
         text-shadow: -.5px .5px teal, -.75px .75px black, -1px 1px whitesmoke;
