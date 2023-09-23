@@ -110,7 +110,6 @@ p {
 }
 
 .responsive-video:hover {
-    transform: scale(101%);
     transition: ease-in 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
     cursor: pointer;
@@ -118,6 +117,22 @@ p {
 }
 
 table {
+    border-radius: 5px;
+    text-align: center;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+thead {
+    border-radius: 5px;
+    text-align: center;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+tbody {
     border-radius: 5px;
     text-align: center;
     place-items: center;
