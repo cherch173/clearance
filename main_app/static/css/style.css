@@ -246,9 +246,7 @@ footer.page-footer {
     }
 
     #brandName {
-        position: absolute;
-        top: 100%;
-        width: 100%;
+        opacity: 0%;
     }
 
     h5 {
