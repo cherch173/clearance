@@ -55,14 +55,36 @@ a:visited {
 
 a:hover {
     transform: scale(102%);
-    transition: ease-in 173ms;
+    transition: ease-in-out 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
     color: rgb(0, 142, 142);
 }
 
 a:visited:hover {
     transform: scale(102%);
-    transition: ease-in 173ms;
+    transition: ease-in-out 173ms;
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
+    color: rgb(0, 142, 142);
+}
+
+.cardA {
+    color: rgb(0, 85, 85);
+}
+
+.cardA:visited {
+    color: rgb(0, 85, 85); 
+}
+
+a:hover {
+    transform: scale(102%);
+    transition: ease-in-out 173ms;
+    filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
+    color: rgb(0, 142, 142);
+}
+
+a:visited:hover {
+    transform: scale(102%);
+    transition: ease-in-out 173ms;
     filter: drop-shadow(0 0 1.73vmin rgb(183, 220, 210));
     color: rgb(0, 142, 142);
 }
